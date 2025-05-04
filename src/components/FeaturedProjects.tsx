@@ -3,41 +3,10 @@ import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
-interface Project {
-  id: number;
-  title: string;
-  category: string;
-  image: string;
-  description: string;
-}
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Modern Minimalist Living Room",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80",
-    description: "Clean lines, neutral palette, and statement furniture pieces define this contemporary space."
-  },
-  {
-    id: 2,
-    title: "Boutique Coffee Shop",
-    category: "Commercial",
-    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1178&q=80",
-    description: "Rustic meets industrial in this cozy yet spacious coffee shop that prioritizes customer experience."
-  },
-  {
-    id: 3,
-    title: "Luxury Master Bedroom Suite",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1616137148650-5f6946a1dd6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1202&q=80",
-    description: "Opulent textures, custom millwork, and ambient lighting create this sanctuary of relaxation."
-  },
-];
+import { projects } from '@/utils/projectData';
 
 const FeaturedProjects = () => {
-  const [activeProject, setActiveProject] = useState<Project>(projects[0]);
+  const [activeProject, setActiveProject] = useState(projects[0]);
 
   return (
     <section className="section-padding bg-yusluv-cream">
