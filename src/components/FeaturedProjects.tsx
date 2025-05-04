@@ -17,21 +17,21 @@ const projects: Project[] = [
     id: 1,
     title: "Modern Minimalist Living Room",
     category: "Residential",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1258&q=80",
+    image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80",
     description: "Clean lines, neutral palette, and statement furniture pieces define this contemporary space."
   },
   {
     id: 2,
     title: "Boutique Coffee Shop",
     category: "Commercial",
-    image: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1178&q=80",
     description: "Rustic meets industrial in this cozy yet spacious coffee shop that prioritizes customer experience."
   },
   {
     id: 3,
     title: "Luxury Master Bedroom Suite",
     category: "Residential",
-    image: "https://images.unsplash.com/photo-1568377210220-151e1d7f42c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image: "https://images.unsplash.com/photo-1616137148650-5f6946a1dd6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1202&q=80",
     description: "Opulent textures, custom millwork, and ambient lighting create this sanctuary of relaxation."
   },
 ];
