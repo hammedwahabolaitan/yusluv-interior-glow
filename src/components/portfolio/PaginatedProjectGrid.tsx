@@ -23,6 +23,9 @@ const PaginatedProjectGrid = ({ filteredProjects, clearFilters }: PaginatedProje
   
   // Get the current page from the URL or default to 1
   const currentPage = parseInt(searchParams.get('page') || '1');
+  const searchQuery = searchParams.get('search');
+  const selectedCategory = searchParams.get('category');
+  const selectedTag = searchParams.get('tag');
   
   // Calculate pagination
   const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE));
@@ -50,8 +53,20 @@ const PaginatedProjectGrid = ({ filteredProjects, clearFilters }: PaginatedProje
   if (filteredProjects.length === 0) {
     return (
       <div className="text-center py-16">
-        <h3 className="text-xl font-serif mb-4">No projects match your filters</h3>
-        <p className="mb-6 text-gray-600">Try adjusting your filter criteria or clearing all filters.</p>
+        <h3 className="text-xl font-serif mb-4">No projects found</h3>
+        
+        {searchQuery && (
+          <p className="mb-2 text-gray-600">
+            No results found for "{searchQuery}"
+          </p>
+        )}
+        
+        {(selectedCategory || selectedTag) && (
+          <p className="mb-6 text-gray-600">
+            Try adjusting your filter criteria or clearing all filters.
+          </p>
+        )}
+        
         <button 
           onClick={clearFilters}
           className="bg-yusluv-charcoal text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"

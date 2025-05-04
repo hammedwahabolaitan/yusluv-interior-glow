@@ -1,5 +1,6 @@
 
 import { Button } from '@/components/ui/button';
+import { useSearchParams } from 'react-router-dom';
 
 interface PortfolioFiltersProps {
   selectedCategory: string | null;
@@ -20,6 +21,12 @@ const PortfolioFilters = ({
   setSelectedTag,
   clearFilters
 }: PortfolioFiltersProps) => {
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get('search');
+  
+  // Check if any filters are applied (including search)
+  const hasActiveFilters = selectedCategory || selectedTag || searchQuery;
+
   return (
     <section className="py-8 border-b border-gray-200">
       <div className="container mx-auto px-4">
@@ -61,7 +68,7 @@ const PortfolioFilters = ({
           </div>
           
           {/* Clear Filters */}
-          {(selectedCategory || selectedTag) && (
+          {hasActiveFilters && (
             <Button
               variant="ghost"
               size="sm"
