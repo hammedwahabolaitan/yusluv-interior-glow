@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Project } from '@/utils/projectData';
+import { motion } from 'framer-motion';
 
 interface ProjectGridProps {
   filteredProjects: Project[];
@@ -20,10 +21,41 @@ const ProjectGrid = ({ filteredProjects, clearFilters }: ProjectGridProps) => {
     );
   }
 
+  // Animation variants for the grid
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <motion.div 
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {filteredProjects.map((project) => (
-        <div key={project.id} className="group">
+        <motion.div 
+          key={project.id} 
+          className="group"
+          variants={itemVariants}
+        >
           <div className="relative overflow-hidden rounded-lg mb-4">
             <img 
               src={project.image} 
@@ -50,9 +82,9 @@ const ProjectGrid = ({ filteredProjects, clearFilters }: ProjectGridProps) => {
             View Details
             <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
