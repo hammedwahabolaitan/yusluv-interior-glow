@@ -6,31 +6,37 @@ import { ArrowRight, Home, Building2, Layout, Sofa, PenTool, VenetianMask } from
 
 const services = [
   {
+    id: "residential-design",
     title: "Residential Design",
     icon: Home,
     description: "Transform your living spaces into personalized sanctuaries that reflect your unique style and needs.",
   },
   {
+    id: "commercial-spaces",
     title: "Commercial Spaces",
     icon: Building2,
     description: "Create functional and inspiring workplace environments that boost productivity and impress clients.",
   },
   {
+    id: "space-planning",
     title: "Space Planning",
     icon: Layout,
     description: "Optimize your floor plans for ideal flow, functionality and maximum utilization of available space.",
   },
   {
+    id: "furniture-selection",
     title: "Furniture Selection",
     icon: Sofa,
     description: "Source the perfect furniture pieces to complement your space and reflect your aesthetic vision.",
   },
   {
+    id: "3d-visualization",
     title: "3D Visualization",
     icon: VenetianMask,
     description: "Experience your design before implementation with photorealistic 3D renderings of your future space.",
   },
   {
+    id: "custom-solutions",
     title: "Custom Solutions",
     icon: PenTool,
     description: "Bespoke design elements created specifically for your unique spaces and requirements.",
@@ -60,7 +66,7 @@ const ServicesPreview = () => {
                   <h3 className="text-xl font-serif font-semibold mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <Link 
-                    to={`/services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    to={`/services#${service.id}`}
                     className="inline-flex items-center text-yusluv-charcoal font-medium group-hover:text-yusluv-gold transition-colors"
                   >
                     Learn more
