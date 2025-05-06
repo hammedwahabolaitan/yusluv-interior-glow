@@ -6,4 +6,8 @@ export interface GalleryImage {
   category: string;
   description?: string;
   date?: string;
+  designer?: string;
+  location?: string;
+  materials?: string[];
+  styles?: string[];
 }

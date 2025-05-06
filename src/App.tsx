@@ -12,6 +12,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./pages/Contact";
 import Consultation from "./pages/Consultation";
 import Gallery from "./pages/Gallery";
+import ImageDetail from "./pages/ImageDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/consultation" element={<Consultation />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery/image/:id" element={<ImageDetail />} />
           
           {/* Redirect old paths or common misspellings to correct pages */}
           <Route path="/service" element={<Navigate to="/services" replace />} />

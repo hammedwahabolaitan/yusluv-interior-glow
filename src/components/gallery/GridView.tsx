@@ -1,10 +1,11 @@
 
-import { useState } from 'react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card, CardContent } from '@/components/ui/card';
 import { GalleryImage } from './types';
 import ImageLightbox from './ImageLightbox';
 import { Eye } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface GridViewProps {
   images: GalleryImage[];
@@ -27,12 +28,14 @@ const GridView = ({ images }: GridViewProps) => {
                 />
               </AspectRatio>
               <div 
-                className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer"
-                onClick={() => setSelectedImage(image)}
+                className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4"
               >
-                <div className="bg-white/90 rounded-full p-2">
+                <Link 
+                  to={`/gallery/image/${image.id}`} 
+                  className="bg-white/90 rounded-full p-2 hover:bg-white transition-colors"
+                >
                   <Eye className="h-6 w-6 text-gray-800" />
-                </div>
+                </Link>
               </div>
             </div>
             <CardContent className="p-4">
