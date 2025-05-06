@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import ViewSwitcher from './ViewSwitcher';
@@ -10,6 +10,13 @@ export type ViewMode = 'carousel' | 'grid' | 'masonry';
 
 const GalleryShowcase = () => {
   const [viewMode, setViewMode] = useState<ViewMode>('carousel');
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  // Filter images based on selected category
+  const filteredImages = useMemo(() => {
+    if (selectedCategory === null) return galleryImages;
+    return galleryImages.filter(image => image.category === selectedCategory);
+  }, [selectedCategory]);
 
   return (
     <section className="py-16 bg-yusluv-cream">
@@ -21,10 +28,15 @@ const GalleryShowcase = () => {
             and commitment to creating beautiful, functional spaces.
           </p>
           
-          <ViewSwitcher viewMode={viewMode} setViewMode={setViewMode} />
+          <ViewSwitcher 
+            viewMode={viewMode} 
+            setViewMode={setViewMode} 
+            images={galleryImages}
+            onFilterChange={setSelectedCategory}
+          />
         </div>
 
-        <GalleryViewer viewMode={viewMode} images={galleryImages} />
+        <GalleryViewer viewMode={viewMode} images={filteredImages} />
 
         <div className="flex justify-center mt-12">
           <Button asChild variant="default" size="lg">
