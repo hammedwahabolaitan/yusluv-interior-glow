@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
-import { Gallery, GalleryVertical, Images } from 'lucide-react';
+import { GalleryHorizontal, GalleryVertical, Images } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface GalleryImage {
@@ -109,7 +109,7 @@ const GalleryShowcase = () => {
               onClick={() => setViewMode('grid')}
               className="flex items-center gap-2"
             >
-              <Gallery size={16} />
+              <GalleryHorizontal size={16} />
               <span>Grid</span>
             </Button>
             <Button 
