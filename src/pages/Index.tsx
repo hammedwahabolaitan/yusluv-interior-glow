@@ -7,7 +7,7 @@ import FeaturedProjects from '@/components/FeaturedProjects';
 import ServicesPreview from '@/components/ServicesPreview';
 import Testimonials from '@/components/Testimonials';
 import ConsultationCTA from '@/components/ConsultationCTA';
-import GalleryShowcase from '@/components/GalleryShowcase';
+import GalleryShowcase from '@/components/gallery/GalleryShowcase';
 
 const Index = () => {
   useEffect(() => {

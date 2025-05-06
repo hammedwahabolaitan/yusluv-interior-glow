@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import GalleryShowcase from '@/components/GalleryShowcase';
+import GalleryShowcase from '@/components/gallery/GalleryShowcase';
 
 const Gallery = () => {
   useEffect(() => {
