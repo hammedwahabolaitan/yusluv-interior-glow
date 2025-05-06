@@ -4,4 +4,6 @@ export interface GalleryImage {
   src: string;
   alt: string;
   category: string;
+  description?: string;
+  date?: string;
 }
