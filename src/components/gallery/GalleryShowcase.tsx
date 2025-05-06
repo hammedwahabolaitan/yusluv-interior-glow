@@ -2,13 +2,11 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import CarouselView from './gallery/CarouselView';
-import GridView from './gallery/GridView';
-import MasonryView from './gallery/MasonryView';
-import ViewToggle from './gallery/ViewToggle';
-import { galleryImages } from './gallery/galleryData';
+import ViewSwitcher from './ViewSwitcher';
+import GalleryViewer from './GalleryViewer';
+import { galleryImages } from './galleryData';
 
-type ViewMode = 'carousel' | 'grid' | 'masonry';
+export type ViewMode = 'carousel' | 'grid' | 'masonry';
 
 const GalleryShowcase = () => {
   const [viewMode, setViewMode] = useState<ViewMode>('carousel');
@@ -23,12 +21,10 @@ const GalleryShowcase = () => {
             and commitment to creating beautiful, functional spaces.
           </p>
           
-          <ViewToggle viewMode={viewMode} setViewMode={setViewMode} />
+          <ViewSwitcher viewMode={viewMode} setViewMode={setViewMode} />
         </div>
 
-        {viewMode === 'carousel' && <CarouselView images={galleryImages} />}
-        {viewMode === 'grid' && <GridView images={galleryImages} />}
-        {viewMode === 'masonry' && <MasonryView images={galleryImages} />}
+        <GalleryViewer viewMode={viewMode} images={galleryImages} />
 
         <div className="flex justify-center mt-12">
           <Button asChild variant="default" size="lg">
