@@ -7,6 +7,7 @@ import FeaturedProjects from '@/components/FeaturedProjects';
 import ServicesPreview from '@/components/ServicesPreview';
 import Testimonials from '@/components/Testimonials';
 import ConsultationCTA from '@/components/ConsultationCTA';
+import GalleryShowcase from '@/components/GalleryShowcase';
 
 const Index = () => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const Index = () => {
         <HeroSection />
         <ServicesPreview />
         <FeaturedProjects />
+        <GalleryShowcase />
         <Testimonials />
         <ConsultationCTA />
       </main>

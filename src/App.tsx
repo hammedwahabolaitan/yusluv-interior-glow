@@ -11,6 +11,7 @@ import Portfolio from "./pages/Portfolio";
 import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./pages/Contact";
 import Consultation from "./pages/Consultation";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/portfolio/:id" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/consultation" element={<Consultation />} />
+          <Route path="/gallery" element={<Gallery />} />
           
           {/* Redirect old paths or common misspellings to correct pages */}
           <Route path="/service" element={<Navigate to="/services" replace />} />
