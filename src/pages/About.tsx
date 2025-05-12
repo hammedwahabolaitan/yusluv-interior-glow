@@ -15,10 +15,10 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Maria Johnson",
+    name: "YUSUF AZEEZ",
     role: "Principal Designer & Founder",
-    bio: "With over 15 years of experience in the design industry, Maria brings a wealth of knowledge and an eye for transformative spaces. Her work has been featured in Architectural Digest and Elle Decor.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80"
+    bio: "With over 7 years of experience in the design industry, Maria brings a wealth of knowledge and an eye for transformative spaces. Her work has been featured in Architectural Digest and Elle Decor.",
+    image: "https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-6/469584796_17988702113756920_7725602298227192700_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeExF8ZjKZRGU0dDB2PV1F4eFRh8V6bHXhwVGHxXpsdeHCq07Xd1EjT49Z5drlnz8gsF_Nyl3zj2OXjKO5E1M8Gc&_nc_ohc=klcrcSYMcXQQ7kNvwGXwLpT&_nc_oc=Adkn1rSGuEE2g0va2eLtqXtrDFI3_opclJTOhVMFZ6NlLmFJcnROfLY-eVU-tqQPQwQ&_nc_zt=23&_nc_ht=scontent-mad1-1.xx&_nc_gid=qpJPD4zDW12OjSB89LlwmQ&oh=00_AfJVeiSOdwVfKJwy0vAHqvJCwoxsYATCyAztvPBqwiChxg&oe=6827DE84"
   },
   {
     id: 2,
@@ -53,7 +53,7 @@ const About = () => {
         <section className="bg-yusluv-cream py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-6">About Yusluv Interior</h1>
+              <h1 className="text-4xl md:text-5xl font-serif font-semibold mb-6">About Yusluv Interior & furniture</h1>
               <p className="text-lg text-gray-700">
                 Crafting beautiful, functional spaces that reflect our clients' unique stories and enhance their everyday lives.
               </p>
@@ -68,10 +68,10 @@ const About = () => {
               <div>
                 <h2 className="text-3xl font-serif font-semibold mb-6">Our Story</h2>
                 <p className="text-gray-700 mb-4">
-                  Founded in 2010, Yusluv Interior began with a simple mission: to create spaces that inspire. What started as a small design studio has grown into a full-service interior design firm with a portfolio spanning residential and commercial projects across the country.
+                  Founded in 2019, Yusluv Interior & Furniture began with a simple mission: creating inspiring spaces. What started as a small design studio has grown into a full-service interior design firm with a portfolio spanning residential and commercial projects across the country.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  Our approach combines timeless design principles with contemporary innovations, resulting in spaces that are both beautiful and functional. We believe that great design should not only please the eye but also enhance the way you live or work.
+                  Our approach combines timeless design principles with contemporary innovations, resulting in beautiful and functional spaces. We believe that great design should not only please the eye but also enhance the way you live or work.
                 </p>
                 <p className="text-gray-700">
                   At Yusluv Interior, we pride ourselves on our collaborative process. We listen closely to our clients' needs, preferences, and lifestyles to create personalized spaces that truly feel like home or workplaces that boost productivity and well-being.
