@@ -22,13 +22,13 @@ const Footer = () => {
               Premium interior design services transforming spaces into functional and beautiful environments.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-yusluv-gold transition-colors">
+              <a href="https://l.instagram.com/?u=http%3A%2F%2Fwa.me%2F2347060879033&e=AT0tZc0cMSsvBK7jD-wY0aRdt480Rf3O3LYGDMHwwFDwaYibvTIlH4ZECn2ZbBdtDZrfSwW7KPDta-l2g4ER2-Y13VkKm8Ol1cIJS2k&s=1" target="_blank" rel="noopener noreferrer" className="hover:text-yusluv-gold transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-yusluv-gold transition-colors">
+              <a href="https://l.instagram.com/?u=http%3A%2F%2Fwa.me%2F2347060879033&e=AT0tZc0cMSsvBK7jD-wY0aRdt480Rf3O3LYGDMHwwFDwaYibvTIlH4ZECn2ZbBdtDZrfSwW7KPDta-l2g4ER2-Y13VkKm8Ol1cIJS2k&s=1" target="_blank" rel="noopener noreferrer" className="hover:text-yusluv-gold transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-yusluv-gold transition-colors">
+              <a href="https://l.instagram.com/?u=http%3A%2F%2Fwa.me%2F2347060879033&e=AT0tZc0cMSsvBK7jD-wY0aRdt480Rf3O3LYGDMHwwFDwaYibvTIlH4ZECn2ZbBdtDZrfSwW7KPDta-l2g4ER2-Y13VkKm8Ol1cIJS2k&s=1" target="_blank" rel="noopener noreferrer" className="hover:text-yusluv-gold transition-colors">
                 <Linkedin size={18} />
               </a>
             </div>
